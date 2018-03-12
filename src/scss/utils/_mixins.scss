@@ -1,0 +1,33 @@
+/**
+ * Responsive Breakpoint Manager 
+ *
+ * 0px - 600px:       Small
+ * 600px - 900px:     Medium
+ * 900px - 1200px:    Large
+ * 1800px and more:   Huge
+ */
+
+$breakpoints: (
+  'small': (max-width: px-to-em(500px)),
+  'medium': (max-width: px-to-em(900px)),
+  'large': (max-width: px-to-em(1140px)),
+  'huge': (min-width: px-to-em(2000px)),
+);
+
+@mixin respond($breakpoint) {
+  $raw-query: map-get($breakpoints, $breakpoint);
+
+  @if $raw-query {
+    $query: if(
+      type-of($raw-query) == 'string',
+      unquote($raw-query),
+      inspect($raw-query)
+    );
+
+    @media #{$query} {
+      @content;
+    }
+  } @else {
+    @error 'No value found for `#{$breakpoint}` in `$breakpoints` map.';
+  }
+}

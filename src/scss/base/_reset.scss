@@ -1,0 +1,22 @@
+/**
+ * Basic reset of font-size, box-sizing, margin and padding.
+ *
+ * 1. Thanks to this declaration You can easily build layout based on rem unit.
+ *    At normal state (without any media queries) 1rem is equal to 10px.
+ *    Value is calculated assuming that 1rem is originally 16px.
+ *    You can change that by adding next function parameter, e.g. 'px-to-percent(10px, 20px)'.
+ */
+
+ html {
+  font-size: px-to-percent(10px); /* 1 */  
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
