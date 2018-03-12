@@ -33,6 +33,34 @@ I found out that with it's help I can also create all above tasks. So I made sim
 └── webpack.config.js                  # Webpack configuration
 ```
 
+## Usage
+
+Clone repo and install dependencies
+
+```bash
+$ git clone https://github.com/appalaszynski/switch-gulp-to-webpack.git MyWebsite
+$ cd MyWebsite
+$ npm install                          
+```
+
+Run development server
+
+```shell
+$ npm run dev-server
+```
+
+Build for development
+
+```shell
+$ npm run build:dev
+```
+
+Build for production
+
+```shell
+$ npm run build:prod
+```
+
 ## Configuration files
 
 ### .babelrc
