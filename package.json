@@ -1,14 +1,13 @@
 {
   "name": "switch-gulp-to-webpack",
-  "version": "1.0.0",
   "author": "Adam Pałaszyński",
-  "description": "Switch from Gulp to Webpack",
   "scripts": {
-    "dev-server": "npm run build:dev && webpack-dev-server --mode development",
+    "dev-server": "webpack-dev-server --mode development",
     "build:dev": "rm -rf ./public && webpack --mode development",
     "build:prod": "rm -rf ./public && webpack -p --env production --mode production"
   },
   "devDependencies": {
+    "autoprefixer": "^8.1.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.6.1",
@@ -25,8 +24,7 @@
     "postcss-loader": "^2.1.1",
     "resolve-url": "^0.2.1",
     "sass-loader": "^6.0.7",
-    "svg-sprite-loader": "^3.7.0",
-    "url-loader": "^1.0.1",
+    "svg-sprite-loader": "^3.7.1",
     "webpack": "^4.1.1",
     "webpack-cli": "^2.0.11",
     "webpack-dev-server": "^3.1.1"
